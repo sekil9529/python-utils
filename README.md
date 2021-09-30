@@ -15,3 +15,5 @@
     - attr_dict: Attr字典
 - datetime_utils: 日期工具
     - unix_timestamp: 提供unix时间戳与datetime互相转换的函数
+- config_utils: 配置工具
+    - config: 配置类，支持配置文件转字典
