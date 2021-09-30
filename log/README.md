@@ -1,4 +1,6 @@
-# logger
+# log
+
+日志相关工具
 
 ### 1.logger_proxy
 
@@ -6,7 +8,7 @@
 - demo
  
 ```
-from logger.logger_proxy import LoggerProxy
+from log.logger_proxy import LoggerProxy
 
 logger: LoggerProxy = LoggerProxy(__name__)
 
