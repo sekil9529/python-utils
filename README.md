@@ -8,7 +8,7 @@
 
 # 模块功能说明
 
-- demo: 其他功能模块的测试代码
+- test: 其他功能模块的测试代码
 - log_utils: 日志工具
     - logger_proxy: logger代理器
 - data_type_utils: 数据类型工具

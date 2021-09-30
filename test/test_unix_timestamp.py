@@ -13,6 +13,5 @@ from datetime_utils.unix_timestamp import from_unix_timestamp, to_unix_timestamp
 if __name__ == '__main__':
     unix_ts: float = -1.0
     dt: datetime = from_unix_timestamp(unix_ts)
-    print(to_unix_timestamp(dt))
-    print(to_unix_timestamp(dt) == unix_ts)
     print(dt)
+    assert to_unix_timestamp(dt) == unix_ts

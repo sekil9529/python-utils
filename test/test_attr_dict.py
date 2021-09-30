@@ -14,6 +14,6 @@ if __name__ == '__main__':
     dic = AttrDict(a=3, b=4)
     dic.update(a=100, c=200)
     dic.t1 = "asd"
-    print(dic.c)
-    print(isinstance(dic, dict))
-    print(json.dumps(dic))
+    assert dic.c
+    assert isinstance(dic, dict)
+    assert json.dumps(dic)
