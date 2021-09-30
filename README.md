@@ -17,3 +17,5 @@
     - unix_timestamp: 提供unix时间戳与datetime互相转换的函数
 - config_utils: 配置工具
     - config: 配置类，支持配置文件转字典
+- singleton_utils: 单例工具
+    - singleton_type: 单例类（元类）
