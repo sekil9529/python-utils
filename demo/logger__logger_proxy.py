@@ -8,11 +8,11 @@ import_module("_add_path")
 from typing import Any
 import logging.config
 
-from log.logger_proxy import LoggerProxy
+from log_utils.logger_proxy import LoggerProxy
 
 # 定义logger
 logger: LoggerProxy = LoggerProxy(__name__)
-# log: logging.Logger = logging.getLogger(__name__)
+# log_utils: logging.Logger = logging.getLogger(__name__)
 
 
 if __name__ == '__main__':
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     # 应用配置晚于logger定义
     logging.config.dictConfig(logging_config)
 
-    logger.info("log proxy info.")
+    logger.info("log_utils proxy info.")

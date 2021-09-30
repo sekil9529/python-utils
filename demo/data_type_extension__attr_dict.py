@@ -7,7 +7,7 @@ import_module("_add_path")
 
 import json
 
-from data_type_extension.attr_dict import AttrDict
+from data_type_utils.attr_dict import AttrDict
 
 
 if __name__ == '__main__':

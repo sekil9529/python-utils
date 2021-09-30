@@ -1,6 +1,6 @@
-# data_type_extension
+# data_type_utils
 
-数据类型扩展
+数据类型工具
 
 ### 1.attr_dict
 
@@ -8,7 +8,7 @@
 - demo
 
 ```
-from data_type_extension.attr_dict import AttrDict
+from data_type_utils.attr_dict import AttrDict
 
 
 dic = AttrDict()
