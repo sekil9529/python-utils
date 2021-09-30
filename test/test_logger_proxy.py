@@ -12,7 +12,7 @@ from log_utils.logger_proxy import LoggerProxy
 
 # 定义logger
 logger: LoggerProxy = LoggerProxy(__name__)
-# log_utils: logging.Logger = logging.getLogger(__name__)
+# logger: logging.Logger = logging.getLogger(__name__)
 
 
 if __name__ == '__main__':
