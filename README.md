@@ -19,3 +19,6 @@
     - config: 配置类，支持配置文件转字典
 - singleton_utils: 单例工具
     - singleton_type: 单例类（元类）
+- password_utils: 密码工具
+    - make_password: 生成密码方法
+ 
