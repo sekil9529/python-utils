@@ -31,7 +31,7 @@ sql: str = "select t.id, t.name from t where t.name = %s limit 1"
 result: Optional[dict] = session.exec_and_fetchone(sql, params=("小明",))
 
 # 3.执行并获取多行数据
-sql: str = "select t.id, t.name from t where t.name != %(name)s limit 10"
+sql: str = "select t.id, t.name from t where t.name != %s limit 10"
 results: tuple[dict, ...] = session.exec_and_fetchall(sql, params=("小明",))
 
 # 4.使用原生cursor对象
