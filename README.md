@@ -21,4 +21,6 @@
     - singleton_type: 单例类（元类）
 - password_utils: 密码工具
     - make_password: 生成密码方法
+- django_utils: django工具
+    - mysql_session: 提供执行原生SQL的方法
  
