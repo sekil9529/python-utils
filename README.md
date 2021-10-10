@@ -23,4 +23,5 @@
     - make_password: 生成密码方法
 - django_utils: django工具
     - mysql_session: 提供执行原生SQL的方法
- 
+- error_code_utils: 错误码工具
+    - error_code: 提供基于 NamedTuple + Enum 的错误码数据结构
