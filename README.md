@@ -13,6 +13,7 @@
     - logger_proxy: logger代理器
 - data_type_utils: 数据类型工具
     - attr_dict: Attr字典
+    - error_code: 提供基于 NamedTuple + Enum 的错误码数据结构
 - datetime_utils: 日期工具
     - unix_timestamp: 提供unix时间戳与datetime互相转换的函数
 - config_utils: 配置工具
@@ -23,7 +24,5 @@
     - make_password: 生成密码方法
 - django_utils: django工具
     - mysql_session: 提供执行原生SQL的方法
-- error_code_utils: 错误码工具
-    - error_code: 提供基于 NamedTuple + Enum 的错误码数据结构
 - invite_code_utils: 邀请码工具
     - invite_code: 根据用户id（int）生成邀请码；根据邀请码解析用户id

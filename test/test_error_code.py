@@ -5,7 +5,7 @@ from __future__ import annotations
 from importlib import import_module
 import_module("_add_path")
 
-from error_code_utils.error_code import ECData, BaseECEnum
+from data_type_utils.error_code import ECData, BaseECEnum
 
 
 if __name__ == '__main__':
