@@ -25,3 +25,5 @@
     - mysql_session: 提供执行原生SQL的方法
 - error_code_utils: 错误码工具
     - error_code: 提供基于 NamedTuple + Enum 的错误码数据结构
+- invite_code_utils: 邀请码工具
+    - invite_code: 根据用户id（int）生成邀请码；根据邀请码解析用户id
