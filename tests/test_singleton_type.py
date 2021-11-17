@@ -2,16 +2,13 @@
 
 from __future__ import annotations
 
-from importlib import import_module
-import_module("_add_path")
-
 import time
 import threading
 
-from singleton_utils.singleton_type import SingletonType
+from utils.singleton_utils.singleton_type import SingletonType
 
 
-class Test(metaclass=SingletonType):
+class TT(metaclass=SingletonType):
     """测试类"""
 
     def __init__(self, x):
@@ -19,16 +16,16 @@ class Test(metaclass=SingletonType):
         time.sleep(1)
 
 
-def task(arg, lst: list[Test]) -> None:
+def task(arg, lst: list[TT]) -> None:
     # cls()时，优先执行cls的元类的 __call__()方法
-    t = Test(arg)
+    t = TT(arg)
     lst.append(t)
     return None
 
 
-if __name__ == '__main__':
+def test_singleton() -> None:
     num: int = 20
-    test_list: list[Test] = []
+    test_list: list[TT] = []
     thread_list: list[threading.Thread] = []
     for i in range(num):
         thread = threading.Thread(target=task, args=(i, test_list))

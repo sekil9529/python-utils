@@ -2,15 +2,12 @@
 
 from __future__ import annotations
 
-from importlib import import_module
-import_module("_add_path")
-
 from random import sample
 
-from invite_code_utils.invite_code import InviteCode
+from utils.invite_code_utils.invite_code import InviteCode
 
 
-if __name__ == '__main__':
+def test_invite_code() -> None:
     k: int = 6
     max_uid: int = len(InviteCode.source_str) ** k - 1
     ic: InviteCode = InviteCode()
@@ -23,3 +20,7 @@ if __name__ == '__main__':
         code: str = ic.encode(uid, digit=k)
         # print(uid, code, ic.decode(code))
         assert uid == ic.decode(code)
+    try:
+        ic.encode(max_uid+1, digit=k)
+    except Exception as e:
+        assert isinstance(e, ValueError)

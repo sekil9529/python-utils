@@ -2,18 +2,20 @@
 
 from __future__ import annotations
 
-from importlib import import_module
-import_module("_add_path")
-
 import json
+import pytest
 
-from data_type_utils.attr_dict import AttrDict
+from utils.data_type_utils.attr_dict import AttrDict
 
 
-if __name__ == '__main__':
+def test_attr_dict() -> None:
     dic = AttrDict(a=3, b=4)
     dic.update(a=100, c=200)
     dic.t1 = "asd"
     assert dic.c
     assert isinstance(dic, dict)
     assert json.dumps(dic)
+    try:
+        dic.aaa
+    except Exception as e:
+        assert isinstance(e, AttributeError)

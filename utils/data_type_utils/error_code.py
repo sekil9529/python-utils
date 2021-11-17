@@ -22,7 +22,7 @@ class ECData(NamedTuple):
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, ECData):
-            raise NotImplemented
+            raise NotImplementedError
         return self.code == other.code
 
 

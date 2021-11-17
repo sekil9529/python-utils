@@ -9,7 +9,7 @@ except ImportError:
     from pymysql.cursors import DictCursor
 from django.db import connections
 
-from singleton_utils.singleton_type import SingletonType
+from utils.singleton_utils.singleton_type import SingletonType
 
 
 class MySQLSession(metaclass=SingletonType):

@@ -2,20 +2,17 @@
 
 from __future__ import annotations
 
-from importlib import import_module
-import_module("_add_path")
-
 from typing import Any
 import logging.config
 
-from log_utils.logger_proxy import LoggerProxy
+from utils.log_utils.logger_proxy import LoggerProxy
 
 # 定义logger
 logger: LoggerProxy = LoggerProxy(__name__)
 # logger: logging.Logger = logging.getLogger(__name__)
 
 
-if __name__ == '__main__':
+def test_logger() -> None:
     # logging配置
     logging_config: dict[str, Any] = {
         'version': 1,
