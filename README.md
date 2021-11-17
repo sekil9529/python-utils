@@ -29,4 +29,4 @@
     - invite_code: 根据用户id（int）生成邀请码；根据邀请码解析用户id
 
 # 单元测试
-python -m pytest --html=./report.html --cov-report=html --self-contained-html --cov=./utils
+python -m pytest
