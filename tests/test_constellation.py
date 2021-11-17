@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta
 from utils.datetime_utils.constellation import datetime_to_constellation
 
 
-def test_t() -> None:
+def test_constellation() -> None:
     month_date_constellation_map: dict[str, tuple[str, str]] = {
         "白羊座": ("3.21", "4.19"),
         "金牛座": ("4.20", "5.20"),
