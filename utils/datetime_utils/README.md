@@ -21,3 +21,7 @@ dt: datetime = from_unix_timestamp(unix_ts)
 now: datetime = datetime.now()
 unix_ts: float = to_unix_timestamp(now)
 ```
+
+### 2.constellation/datetime_to_constellation
+
+- 日期转换成星座

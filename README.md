@@ -16,6 +16,7 @@
     - error_code: 提供基于 NamedTuple + Enum 的错误码数据结构
 - utils/datetime_utils: 日期工具
     - unix_timestamp: 提供unix时间戳与datetime互相转换的函数
+    - constellation: 提供日期转换星座的函数
 - utils/config_utils: 配置工具
     - config: 配置类，支持配置文件转字典
 - utils/singleton_utils: 单例工具
