@@ -28,7 +28,9 @@ def test_t() -> None:
         v1, v2 = v_tuple
         start_dt: datetime = datetime(today.year, *(int(i) for i in v1.split(".")))
         end_dt: datetime = datetime(today.year, *(int(i) for i in v2.split(".")))
-        mid_dt: datetime = start_dt + timedelta(days=15)
+        if end_dt < start_dt:
+            end_dt = end_dt.replace(year=end_dt.year + 1)
+        mid_dt: datetime = start_dt + timedelta(days=(end_dt - start_dt).days // 2)
         assert datetime_to_constellation(start_dt) == k
         assert datetime_to_constellation(end_dt) == k
         assert datetime_to_constellation(mid_dt) == k
