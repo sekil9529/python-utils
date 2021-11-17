@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 from utils.datetime_utils.constellation import datetime_to_constellation
 
@@ -25,6 +25,10 @@ def test_t() -> None:
 
     today: date = date.today()
     for k, v_tuple in month_date_constellation_map.items():
-        for v in v_tuple:
-            dt: datetime = datetime(today.year, *(int(i) for i in v.split(".")))
-            assert datetime_to_constellation(dt) == k
+        v1, v2 = v_tuple
+        start_dt: datetime = datetime(today.year, *(int(i) for i in v1.split(".")))
+        end_dt: datetime = datetime(today.year, *(int(i) for i in v2.split(".")))
+        mid_dt: datetime = start_dt + timedelta(days=15)
+        assert datetime_to_constellation(start_dt) == k
+        assert datetime_to_constellation(end_dt) == k
+        assert datetime_to_constellation(mid_dt) == k
